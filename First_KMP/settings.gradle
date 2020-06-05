@@ -1,0 +1,5 @@
+rootProject.name = 'First_KMP'
+
+include ':app'
+enableFeaturePreview('GRADLE_METADATA')
+

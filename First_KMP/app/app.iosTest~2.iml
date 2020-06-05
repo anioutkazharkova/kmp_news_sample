@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="Native " allPlatforms="Native []" useProjectSettings="false" isTestModule="true" externalProjectId=":app">
+        <dependsOnModuleNames>:app:commonTest</dependsOnModuleNames>
+        <sourceSets>
+          <sourceSet>app.iosMain~2</sourceSet>
+          <sourceSet>app.commonTest~2</sourceSet>
+          <sourceSet>app.commonMain~2</sourceSet>
+        </sourceSets>
+        <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
+        <externalSystemTestTasks>iosTest|:app:iosTest|ios</externalSystemTestTasks>
+        <compilerSettings />
+        <compilerArguments>
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array>
+              <option value="plugin:org.jetbrains.kotlin.android:experimental=false" />
+              <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
+              <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
+            </array>
+          </option>
+          <option name="pluginClasspaths">
+            <array>
+              <option value="$KOTLIN_BUNDLED$/lib/kotlinx-serialization-compiler-plugin.jar" />
+            </array>
+          </option>
+          <option name="multiPlatform" value="true" />
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+</module>

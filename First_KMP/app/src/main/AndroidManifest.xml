@@ -1,0 +1,16 @@
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.azharkova.news">
+    <uses-permission android:name="android.permission.INTERNET"/>
+<application>
+
+    <activity android:name="com.azharkova.news.ui.NewsActivity"
+              android:label="@string/title_activity_news"
+              android:theme="@style/AppTheme.NoActionBar"
+    >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+    </activity>
+</application>
+</manifest>
