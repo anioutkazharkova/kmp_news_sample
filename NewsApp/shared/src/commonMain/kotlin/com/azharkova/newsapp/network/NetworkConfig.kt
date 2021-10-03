@@ -1,4 +1,4 @@
-package com.azharkova.news.http
+package com.azharkova.newsapp.network
 
 class NetworkConfig {
     companion object shared{
