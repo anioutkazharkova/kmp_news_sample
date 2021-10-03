@@ -6,5 +6,7 @@
 
 [x] Integrated Redux MVI
 
+[x] SwiftUI in iOS side
+
 [x] Using Flow collector on iOS
 
