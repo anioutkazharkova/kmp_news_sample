@@ -12,26 +12,6 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-data class NewsStoreState(
-    val progress: Boolean,
-    val news: List<NewsItem>,
-    val selectedItem: NewsItem? = null //null means selected all
-) : StoreState
-
-sealed class NewsAction : Action {
-    data class Refresh(val forceLoad: Boolean) : NewsAction()
-    data class SelectItem(val feed: NewsItem?) : NewsAction()
-    data class Data(val feeds: List<NewsItem>) : NewsAction()
-    data class Error(val error: ErrorResponse) : NewsAction()
-}
-
-interface NewsActionType {
-    fun refresh(forceLoad: Boolean)
-    fun selectItem(feed: NewsItem?)
-    fun data(feeds: List<NewsItem>)
-    fun error(error: ErrorResponse)
-}
-
 sealed class NewsSideEffect : Effect {
     data class Error(val error: ErrorResponse) : NewsSideEffect()
 }
@@ -60,7 +40,6 @@ class NewsListStore : Store<NewsStoreState, NewsAction, NewsSideEffect>, NewsAct
 
     override fun dispatch(action: NewsAction) {
         val oldState = state.value
-
         val newState = when (action) {
             is NewsAction.Refresh -> {
                 if (oldState.progress) {
@@ -102,7 +81,7 @@ class NewsListStore : Store<NewsStoreState, NewsAction, NewsSideEffect>, NewsAct
             }
         }
         if (newState != oldState) {
-            state.value = newState as NewsStoreState
+            state.value = newState
         }
     }
 
